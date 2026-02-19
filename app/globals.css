@@ -10,6 +10,7 @@
 body {
   background-color: var(--color-bg-main);
   color: #ffffff;
+  font-family: var(--font-red-hat-display), sans-serif;
 }
 
 /* Custom Scrollbar for a premium feel */

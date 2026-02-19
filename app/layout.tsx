@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Red_Hat_Display } from "next/font/google";
 import "./globals.css";
 import { Sidebar } from "@/app/components/layout/Sidebar";
 import { Topbar } from "@/app/components/layout/Topbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const redHatDisplay = Red_Hat_Display({
+  variable: "--font-red-hat-display",
   subsets: ["latin"],
 });
 
@@ -26,9 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className={`${redHatDisplay.variable} antialiased`}>
         <div className="flex min-h-screen">
           <Sidebar />
           <main className="flex-1 ml-[260px] flex flex-col min-h-screen">
