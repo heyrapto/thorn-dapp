@@ -76,8 +76,8 @@ export default function PositionManagerPage() {
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`px-6 py-2.5 rounded-full text-sm font-medium transition-colors ${activeTab === tab
-                                ? "bg-[#9d0c15] text-white shadow-[0_0_15px_rgba(157,12,21,0.5)]"
-                                : "bg-[#252525] hover:bg-[#333] text-gray-400 hover:text-white"
+                            ? "bg-[#9d0c15] text-white shadow-[0_0_15px_rgba(157,12,21,0.5)]"
+                            : "bg-[#252525] hover:bg-[#333] text-gray-400 hover:text-white"
                             }`}
                     >
                         {tab}
@@ -127,7 +127,7 @@ export default function PositionManagerPage() {
             </div>
 
             {/* Floating Social Icons */}
-            <div className="fixed bottom-10 right-32 flex items-center gap-4 text-gray-400 z-40">
+            <div className="absolute bottom-10 right-32 flex items-center gap-4 text-gray-400 z-40">
                 <a href="#" className="hover:text-white transition-colors">
                     <FaTelegramPlane className="w-5 h-5" />
                 </a>

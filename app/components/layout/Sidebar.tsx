@@ -39,19 +39,19 @@ export function Sidebar() {
     };
 
     return (
-        <div className="w-[260px] flex-shrink-0 bg-[#0c0c0c] border-r border-[#222] min-h-screen flex flex-col items-center py-6 fixed left-0 top-0">
+        <div className="w-[260px] flex-shrink-0 bg-[#0c0c0c] border-r border-[#222] min-h-screen flex flex-col items-start py-6 fixed left-0 top-0">
             {/* Logo Area */}
-            <div className="flex items-center gap-3 px-6 w-full mb-10">
+            <div className="flex items-start gap-3 px-6 w-[180px] mb-20">
                 <img src="/thorn-logo.png" alt="Thorn Logo" className="w-full h-full rounded-full" />
             </div>
 
             {/* Nav Menu */}
-            <nav className="flex flex-col w-full px-4 gap-2">
+            <nav className="flex flex-col w-full gap-2">
                 {NAV_ITEMS.map((item) => {
                     const hasChildren = !!item.children;
                     const isActive = item.href
                         ? pathname === item.href || pathname.startsWith(`${item.href}/`)
-                        : hasChildren && item.children!.some(child => pathname === child.href || pathname.startsWith(`${child.href}/`));
+                        : hasChildren && item.children!.some(child => pathname === child.href || (child.href !== "/stable-swap" && pathname.startsWith(`${child.href}/`)));
 
                     const isDropdownOpen = openDropdown === item.title;
 
@@ -61,8 +61,8 @@ export function Sidebar() {
                                 <button
                                     onClick={() => toggleDropdown(item.title)}
                                     className={cn(
-                                        "w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-colors border-l-4",
-                                        isActive ? "bg-transparent text-white border-red-600" : "text-gray-400 hover:bg-[#1a1a1a] hover:text-white border-transparent"
+                                        "w-full flex items-center justify-between px-4 py-3 text-sm font-medium transition-colors border-l-4",
+                                        isActive ? "bg-gray-400/10 text-white border-red-600" : "text-gray-400 hover:bg-[#1a1a1a] hover:text-white border-transparent"
                                     )}
                                 >
                                     <div className="flex items-center gap-3">
@@ -80,9 +80,9 @@ export function Sidebar() {
                                 <Link
                                     href={item.href || "#"}
                                     className={cn(
-                                        "w-full flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors border-l-4",
+                                        "w-full flex items-center gap-3 px-4 py-3 text-sm font-medium transition-colors border-l-4",
                                         isActive
-                                            ? "bg-transparent text-white border-red-600"
+                                            ? "bg-gray-400/10 text-white border-red-600"
                                             : "text-gray-400 hover:bg-[#1a1a1a] hover:text-white border-transparent"
                                     )}
                                 >
@@ -107,7 +107,7 @@ export function Sidebar() {
                                                     href={child.href}
                                                     className={cn(
                                                         "w-full text-[13px] transition-colors block text-left",
-                                                        (pathname === child.href || pathname.startsWith(`${child.href}/`))
+                                                        (pathname === child.href || (child.href !== "/stable-swap" && pathname.startsWith(`${child.href}/`)))
                                                             ? "text-red-600 font-medium"
                                                             : "text-gray-400 hover:text-gray-200"
                                                     )}

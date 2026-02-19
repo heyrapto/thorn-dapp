@@ -22,7 +22,7 @@ export default function AnalyticPage() {
             <PoolsTable />
 
             {/* Floating Social Icons */}
-            <div className="fixed bottom-10 right-32 flex items-center gap-4 text-gray-400 z-40">
+            <div className="absolute bottom-10 right-32 flex items-center gap-4 text-gray-400 z-40">
                 <a href="#" className="hover:text-white transition-colors">
                     <FaTelegramPlane className="w-5 h-5" />
                 </a>
