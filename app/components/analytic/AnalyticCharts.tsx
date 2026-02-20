@@ -66,7 +66,7 @@ export function AnalyticCharts() {
 
                 <div className="w-full h-[320px] mt-24">
                     <ResponsiveContainer width="100%" height="100%">
-                        <AreaChart data={liquidityData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
+                        <AreaChart data={liquidityData} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
                             <defs>
                                 <linearGradient id="colorLiquidity" x1="0" y1="0" x2="0" y2="1">
                                     <stop offset="5%" stopColor="#9d0c15" stopOpacity={0.3} />
@@ -89,6 +89,7 @@ export function AnalyticCharts() {
                                 domain={[0, 200000]}
                                 ticks={[0, 50000, 100000, 150000, 200000]}
                                 orientation="right"
+                                width={50}
                             />
                             <Tooltip
                                 contentStyle={{ backgroundColor: '#1a1a1a', border: '1px solid #333', borderRadius: '8px', color: '#fff' }}
@@ -118,7 +119,7 @@ export function AnalyticCharts() {
 
                 <div className="w-full h-[320px] mt-24">
                     <ResponsiveContainer width="100%" height="100%">
-                        <BarChart data={volumeData} margin={{ top: 10, right: 0, left: -20, bottom: 0 }}>
+                        <BarChart data={volumeData} margin={{ top: 10, right: 0, left: 0, bottom: 0 }}>
                             <XAxis
                                 dataKey="date"
                                 axisLine={false}
@@ -135,6 +136,7 @@ export function AnalyticCharts() {
                                 domain={[0, 80000]}
                                 ticks={[0, 20000, 40000, 60000, 80000]}
                                 orientation="right"
+                                width={50}
                             />
                             <Tooltip
                                 cursor={{ fill: '#2a2a2a' }}

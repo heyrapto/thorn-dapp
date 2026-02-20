@@ -285,11 +285,10 @@ export function ChartsArea() {
                                 </ResponsiveContainer>
                             </div>
 
-                            {/* Legend row */}
                             <div className="flex items-center justify-between w-full mt-4 px-2 text-xs">
                                 <div className="flex items-center gap-2">
-                                    <div className="w-5 h-5 rounded-full bg-blue-600 flex items-center justify-center text-white text-[9px] font-bold">
-                                        $
+                                    <div className="w-5 h-5 rounded-full overflow-hidden flex-shrink-0">
+                                        <img src="/usdc.webp" alt="USDC" className="w-full h-full object-cover" />
                                     </div>
                                     <span className="text-gray-400">USDC</span>
                                 </div>

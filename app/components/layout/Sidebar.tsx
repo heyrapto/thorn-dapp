@@ -152,7 +152,7 @@ function NavContent({
 /* ── Social icons row ── */
 function SocialIcons() {
     return (
-        <div className="flex items-center gap-5 px-4 pb-2">
+        <div className="flex md:hidden items-center gap-5 px-4 pb-2">
             {SOCIAL_LINKS.map(({ href, icon: Icon, label }) => (
                 <a
                     key={label}

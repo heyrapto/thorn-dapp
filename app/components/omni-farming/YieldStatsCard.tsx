@@ -8,14 +8,10 @@ export function YieldStatsCard() {
     return (
         <Card className="mb-6 p-6">
             <div className="flex items-center gap-4 mb-8">
-                {/* Mocking the double circle icon of USDC / Sapphire */}
-                <div className="relative w-12 h-12">
-                    <div className="absolute inset-0 bg-blue-500 rounded-full border-2 border-[#141414]"></div>
-                    <div className="absolute -bottom-1 -right-1 bg-[#141414] rounded-full p-0.5">
-                        <div className="text-blue-400 border border-blue-400 rounded-full w-5 h-5 flex items-center justify-center text-[10px] font-bold bg-[#141414]">
-                            $
-                        </div>
-                    </div>
+                {/* USDC on Sapphire stacked icon */}
+                <div className="relative w-12 h-12 flex-shrink-0">
+                    <img src="/usdc-sapphire.png" alt="USDC Sapphire" className="w-10 h-10 rounded-full object-cover" />
+                    <img src="/OASIS.jpg" alt="Sapphire" className="absolute -bottom-1 -right-1 w-5 h-5 rounded-full object-cover border-2 border-[#141414]" />
                 </div>
 
                 <div className="flex flex-col">

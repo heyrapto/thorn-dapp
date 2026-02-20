@@ -36,10 +36,14 @@ export function YieldSelector() {
                     )}
                 >
                     <div className="flex items-center gap-2">
-                        <div className="w-5 h-5 rounded-full bg-blue-500 flex items-center justify-center">
-                            <span className="text-white text-[10px] font-bold">S</span>
+                        <div className="w-6 h-6 rounded-full overflow-hidden flex-shrink-0">
+                            <img
+                                src={option.id === "sapphire" ? "/usdc-sapphire.png" : "/usdc-base.png"}
+                                alt={option.title}
+                                className="w-full h-full object-cover"
+                            />
                         </div>
-                        <span className={cn("text-sm font-medium", activeId === option.id ? "text-white" : "text-gray-300")}>
+                        <span className={cn("text-sm font-medium whitespace-nowrap", activeId === option.id ? "text-white" : "text-gray-300")}>
                             {option.title}
                         </span>
                     </div>

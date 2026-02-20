@@ -5,12 +5,6 @@ import { usePathname } from "next/navigation";
 import { LuWallet } from "react-icons/lu";
 import { FiMenu } from "react-icons/fi";
 
-const OasisLogo = () => (
-    <svg width="20" height="20" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="mr-1">
-        <path d="M20 0C8.954 0 0 8.954 0 20C0 31.046 8.954 40 20 40C31.046 40 40 31.046 40 20C40 8.954 31.046 0 20 0ZM20 31.5C13.649 31.5 8.5 26.351 8.5 20C8.5 13.649 13.649 8.5 20 8.5C26.351 8.5 31.5 13.649 31.5 20C31.5 26.351 26.351 31.5 20 31.5Z" fill="#03A5F0" />
-        <path d="M20 12.5C15.858 12.5 12.5 15.858 12.5 20C12.5 24.142 15.858 27.5 20 27.5C24.142 27.5 27.5 24.142 27.5 20C27.5 15.858 24.142 12.5 20 12.5Z" fill="#03A5F0" />
-    </svg>
-);
 
 export function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
     const pathname = usePathname();
@@ -35,7 +29,7 @@ export function Topbar({ onMenuClick }: { onMenuClick?: () => void }) {
             <div className="flex items-center gap-3">
                 {pathname.includes("/stable-swap") && (
                     <button className="hidden md:flex items-center gap-2 bg-[#1a1a1a] bg-opacity-80 border border-[#333] hover:border-[#444] text-gray-300 px-4 py-2.5 rounded-xl text-sm font-medium transition-colors">
-                        <OasisLogo />
+                        <img src="/OASIS.jpg" alt="Oasis" className="w-5 h-5 rounded-full object-cover" />
                         Oasis Sapphire
                     </button>
                 )}
