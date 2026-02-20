@@ -23,7 +23,7 @@ export function YieldSelector() {
     const [activeId, setActiveId] = useState("sapphire");
 
     return (
-        <div className="flex items-center gap-4 mb-6">
+        <div className="flex items-center gap-3 mb-6 overflow-x-auto pb-1 scrollbar-none -mx-4 px-4 md:mx-0 md:px-0">
             {YIELD_OPTIONS.map((option) => (
                 <button
                     key={option.id}
